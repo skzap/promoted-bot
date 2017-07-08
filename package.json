@@ -1,0 +1,21 @@
+{
+  "name": "promoted-bot",
+  "version": "0.0.1",
+  "description": "bot for @promoted account on steem",
+  "main": "promoted.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "steem",
+    "steemjs",
+    "bot",
+    "promoted"
+  ],
+  "author": "Adrien M",
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^3.0.1",
+    "steem": "^0.5.20"
+  }
+}

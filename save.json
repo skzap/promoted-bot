@@ -1,0 +1,1 @@
+[29486,{"trx_id":"0621d544eba4f0e6476bdfd8d79028adba2f5648","block":13514503,"trx_in_block":9,"op_in_trx":0,"virtual_op":0,"timestamp":"2017-07-08T21:58:30","op":["transfer",{"from":"plebeian","to":"null","amount":"0.012 SBD","memo":"@plebeian/introduction-post-me-in-a-nutshell"}]}]

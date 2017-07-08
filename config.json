@@ -1,0 +1,8 @@
+{
+  "limit": 2,
+  "retryTime": 5000,
+  "maxWeight": 10000,
+  "maxPrice": 5,
+  "privkey": "",
+  "user": "heimindanger"
+}
