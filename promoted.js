@@ -35,9 +35,9 @@ function upvote(transfer) {
   var amount = transfer[1].op[1].amount.split(' ')[0]
   var token = transfer[1].op[1].amount.split(' ')[1]
   if (token != 'SBD') console.log('NOT SBD')
-  var weight = config.maxWeight // 100%
+  var weight = config.maxWeight
   if (amount < config.maxPrice) weight *= (amount/config.maxPrice) // reducing linearly
-  weight = Math.ceiling(weight)
+  weight = Math.ceil(weight)
   if (weight > config.maxWeight) weight = config.maxWeight
 
   console.log('Voting '+weight/100+'% '+author+'/'+permlink.substr(10))
