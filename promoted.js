@@ -20,7 +20,7 @@ setInterval(function() {
       upvote(history[i])
     }
   });
-}, 4000)
+}, config.refreshTime)
 
 function upvote(transfer) {
   if (save[0] >= transfer[0]) return;
@@ -40,7 +40,11 @@ function upvote(transfer) {
   weight = Math.ceil(weight)
   if (weight > config.maxWeight) weight = config.maxWeight
 
-  console.log('Voting '+weight/100+'% '+author+'/'+permlink.substr(10))
+  if (!permlink || !author || !weight) {
+    console.log(transfer[0], transfer[1].timestamp, transfer[1].block, transfer[1].op)
+    return
+  }
+  console.log('Voting '+weight/100+'% '+author+'/'+permlink.substr(0,10))
   steem.broadcast.vote(
     config.privkey,
     config.user,
@@ -51,7 +55,7 @@ function upvote(transfer) {
       if (err) {
         console.log(err)
       }
-      console.log('Voted! '+weight/100+'% '+author+'/'+permlink.substr(10))
+      console.log('Voted! '+weight/100+'% '+author+'/'+permlink.substr(0,10))
       jsonfile.writeFile('./save.json', transfer, function (error) {
         if (error) throw error;
         save = transfer

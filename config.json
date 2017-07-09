@@ -1,7 +1,8 @@
 {
   "limit": 2,
+  "refreshTime": 4000,
   "retryTime": 5000,
-  "maxWeight": 10000,
+  "maxWeight": 500,
   "maxPrice": 5,
   "privkey": "",
   "user": "heimindanger"
